@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>דניאל - מומחה למיזוג אוויר ומוצרי חשמל לבנים</title>
+    
+    <!-- גופנים: Rubik לעברית מודרנית -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- אייקונים: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<link rel="icon" href="assets/images/logo-icon.ico">
+
+    <style>
+        /* --- משתנים ואיפוס --- */
+        :root {
+            --primary-color: #004e92; /* כחול עמוק */
+            --secondary-color: #00bcd4; /* תכלת */
+            --accent-color: #ff6b6b; /* כתום אדמדם לפעולה */
+            --dark-text: #2c3e50;
+            --light-bg: #f4f7f6;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+
+        /* --- כפתורים וכותרות --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 35px;
+            background: var(--accent-color);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            background: #ff5252;
+        }
+
+        .btn i { margin-left: 10px; }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #fff;
+            margin-right: 15px;
+            box-shadow: none;
+        }
+
+        /* תיקון לריווח כפתורים */
+        .cta-buttons .btn-outline {
+            margin-right: 15px; 
+            margin-left: 0;
+        }
+
+        .btn-outline:hover {
+            background: #fff;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* --- HEADER & LOGO --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+            padding: 10px 0;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* לוגו (עכשיו תמונה) */
+        .logo-styled {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 1100; /* מעל התפריט במובייל */
+        }
+
+        .logo-image {
+            height: 90px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-left: 12px;
+            box-shadow: 0 4px 10px rgba(0, 78, 146, 0.2);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-main {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+        */
+
+        /* ניווט */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark-text);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            right: 0;
+            background: var(--accent-color);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            padding: 5px;
+            z-index: 1100; /* מעל התפריט הנפתח */
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            height: 100dvh; 
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            z-index: 1;
+            padding: 20px;
+            max-width: 900px;
+            animation: fadeInUp 1s ease-out;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--secondary-color);
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about {
+            padding: 100px 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0,188,212,0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-img-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-img-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--secondary-color);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            object-fit: cover;
+            aspect-ratio: 1/1; 
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .skills {
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            width: 0;
+            border-radius: 10px;
+            transition: width 1.5s ease-out;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 100px 0;
+            background-color: #f8fbfd;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 78, 146, 0.1);
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e0f7fa, #fff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.15);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .icon-box {
+            transform: rotate(10deg) scale(1.1);
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+            color: white;
+            transform: translateY(0); /* תמיד מוצג חלקית */
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            padding-bottom: 35px;
+            background: linear-gradient(to top, rgba(0, 78, 146, 0.9) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        /* --- BRANDS MARQUEE --- */
+        .brands-section {
+            padding: 60px 0;
+            background: #fff;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+            position: relative; /* For calculation context */
+        }
+
+        .brands-header {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            color: #888;
+            font-weight: 300;
+        }
+
+        .marquee {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        /* Fade effect on sides */
+        .marquee::before, .marquee::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .marquee::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+        .marquee::after { right: 0; background: linear-gradient(to left, #fff, transparent); }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 40s linear infinite;
+        }
+
+        .brand-item {
+            padding: 0 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            transition: transform 0.3s ease, color 0.3s ease;
+            opacity: 0.7; /* ברירת מחדל קצת שקוף */
+        }
+
+        /* Logo Image Style */
+        .brand-item img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+            object-fit: contain;
+        }
+        
+        .brand-item span {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Active State (Hover OR Center position) */
+        .brand-item.active,
+        .brand-item:hover {
+            color: var(--primary-color);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .brand-item.active img,
+        .brand-item:hover img {
+            filter: grayscale(0%);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); } /* RTL */
+        }
+
+        /* --- CONTACT --- */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color), #00294d);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact .bg-icon {
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            font-size: 20rem;
+            color: rgba(255,255,255,0.03);
+            transform: rotate(25deg);
+            pointer-events: none;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            width: 280px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* --- FLOATING WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .whatsapp-pulse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25d366;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- רספונסיביות למובייל --- */
+        @media (max-width: 992px) {
+            .about-content { flex-direction: column; text-align: center; }
+            .about-img-wrapper { width: 80%; margin: 0 auto 40px; }
+            .about-img-wrapper::before { top: 15px; left: 15px; }
+            .section-title { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            /* טיפול בהמבורגר */
+            .hamburger { 
+                display: block; 
+                /* דוחף את ההמבורגר לצד שמאל ב-RTL */
+                margin-right: auto;
+            }
+            
+            /* הסתרת תפריט הניווט הרגיל */
+            nav {
+                position: absolute; /* הוצאה מהזרימה כדי לא להפריע להמבורגר */
+            }
+			
+			.logo-image {
+				height: 70px;
+			}
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                padding-top: 50px;
+                gap: 30px;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.4rem;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+
+            .hero h1 { font-size: 2.5rem; }
+            .hero h1 span { font-size: 1.5rem; }
+            .hero p { font-size: 1.1rem; padding: 0 10px;}
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .btn, .btn-outline {
+                width: 80%;
+                margin: 0 0 10px 0 !important; 
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .brand-item {
+                padding: 0 20px;
+            }
+            
+            .marquee-content { animation-duration: 15s; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <!-- לוגו (מימין) -->
+            <a href="#" class="logo-styled">
+                <img src="assets/images/logo-full.png" alt="דניאל - חשמל ומיזוג" class="logo-image">
+            </a>
+
+            <!-- המבורגר (משמאל בגלל margin-right: auto ב-CSS) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- תפריט -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="toggleMenu()">ראשי</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">אודות</a></li>
+                    <li><a href="#services" onclick="toggleMenu()">שירותים</a></li>
+                    <li><a href="#gallery" onclick="toggleMenu()">עבודות</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">צור קשר</a></li>
+                    <li><a href="tel:0500000000" class="btn-nav" style="color:var(--accent-color);"><i class="fa-solid fa-phone"></i> 050-000-0000</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        
+        <!-- וידאו מקובץ שהעלית: טכנאי עובד עם מניפולדים על יחידה חיצונית -->
+        <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg">
+            <!-- שימוש בשם הקובץ שהעלית -->
+            <source src="assets/videos/hero-video.mp4" type="video/mp4">
+            הדפדפן שלך לא תומך בוידאו.
+        </video>
+        
+        <div class="hero-content">
+            <h1>
+                <span>שירות טכנאי מוסמך</span>
+                המומחה שלך למוצרי חשמל ומיזוג
+            </h1>
+            <p>תיקון, התקנה ותחזוקת מזגנים, מקררים ומכונות כביסה. שירות מהיר, אמין ומקצועי בבית הלקוח.</p>
+            <div class="cta-buttons">
+                <a href="tel:+972500000000" class="btn"><i class="fa-solid fa-phone"></i> הזמן טכנאי</a>
+                <a href="#services" class="btn btn-outline">ראה שירותים</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">קצת עלי</div>
+            <div class="about-content">
+                <div class="about-img-wrapper">
+                    <!-- תמונת פרופיל -->
+                    <img src="https://images.pexels.com/photos/8985454/pexels-photo-8985454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="דניאל הטכנאי" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h3>דניאל – איכות ללא פשרות</h3>
+                    <p>
+                        כבר למעלה מ-10 שנים שאני דואג שהבית שלכם יחזור לתפקד במהירות. אני מאמין ששירות טוב מתחיל באבחון מדויק ומסתיים בחיוך.
+                    </p>
+                    <p>
+                        אני מתמחה בתיקון המותגים המובילים בישראל (אלקטרה, תדיראן, LG ועוד), תוך שימוש בחלפים איכותיים ושמירה על סביבת עבודה נקייה ומסודרת בבית הלקוח.
+                    </p>
+                    
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>אמינות ושקיפות</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="100%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>מומחיות במיזוג (VRF/Inverter)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">השירותים שלי</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-wind"></i></div>
+                    <h3>תיקון מזגנים</h3>
+                    <p>איתור דליפות גז, החלפת קבלים, ניקוי עמוק ותיקון כרטיסים אלקטרוניים במזגנים עיליים ומרכזיים.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                    <h3>מקררים ומקפיאים</h3>
+                    <p>טיפול בבעיות הקפאה, החלפת גומיות איטום, מאווררים ומדחסים לכל סוגי המקררים.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-shirt"></i></div>
+                    <h3>מכונות כביסה</h3>
+                    <p>פתרון תקלות סחיטה, החלפת משאבות מים, תיקון דלתות וגומיות, וטיפול ברעשים חריגים.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-fire-burner"></i></div>
+                    <h3>מייבשים ותנורים</h3>
+                    <p>החלפת גופי חימום, רצועות קרועות ותרמוסטטים להבטחת פעולה תקינה ובטיחותית.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Repair Photos) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title">תיקונים מהשטח</div>
+            <p style="text-align:center; max-width:600px; margin:0 auto; color:#666;">דוגמאות לעבודות תיקון ותחזוקה שביצעתי לאחרונה (ולא רק התקנות!)</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- תמונה: תיקון מדחס -->
+                    <img src="assets/images/air_condition_fixing.png" alt="תיקון מדחס מזגן">
+                    <div class="gallery-overlay">
+                        <h3>החלפת מדחס</h3>
+                        <p>תיקון יחידה חיצונית והחלפת קבל</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <!-- תמונה: תיקון מכונת כביסה -->
+                    <img src="assets/images/washing_machine_fixing.png" alt="שיפוץ מכונת כביסה">
+                    <div class="gallery-overlay">
+                        <h3>שיפוץ מכונת כביסה</h3>
+                        <p>החלפת משאבת מים וניקוי פילטר</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <!-- תמונה: תיקון מקרר -->
+                    <img src="assets/images/fridge_fixing.png" alt="תיקון מקרר">
+                    <div class="gallery-overlay">
+                        <h3>תיקון מקרר</h3>
+                        <p>טיפול בבריחת גז והחלפת טיימר</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Marquee WITH LOGOS -->
+    <section class="brands-section">
+        <div class="container">
+            <h3 class="brands-header">מתמחה בתיקון כל המותגים</h3>
+        </div>
+        <div class="marquee">
+            <div class="marquee-content" id="marqueeContent">
+                
+                <!-- Electra -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/electra-air.co.il" alt="Electra" onerror="this.style.display='none'">
+                    <span>ELECTRA</span>
+                </div>
+                
+                <!-- Tadiran - Updated URL -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/tadiran-international.com" alt="Tadiran" onerror="this.style.display='none'">
+                    <span>TADIRAN</span>
+                </div>
+                
+                <!-- Tornado -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/tornado-top.co.il" alt="Tornado" onerror="this.style.display='none'">
+                    <span>TORNADO</span>
+                </div>
+                
+                <!-- Samsung -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.style.display='none'">
+                    <span>SAMSUNG</span>
+                </div>
+                
+                <!-- LG -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/lg.com" alt="LG" onerror="this.style.display='none'">
+                    <span>LG</span>
+                </div>
+                
+                <!-- Bosch -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/bosch.com" alt="Bosch" onerror="this.style.display='none'">
+                    <span>BOSCH</span>
+                </div>
+                
+                <!-- Beko -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/beko.com" alt="Beko" onerror="this.style.display='none'">
+                    <span>BEKO</span>
+                </div>
+                
+                <!-- AEG -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/aeg.com" alt="AEG" onerror="this.style.display='none'">
+                    <span>AEG</span>
+                </div>
+                
+                <!-- Amcor -->
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/amcor.com" alt="Amcor" onerror="this.style.display='none'">
+                    <span>AMCOR</span>
+                </div>
+                
+                <!-- DUPLICATES for infinite loop -->
+                
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/electra-air.co.il" alt="Electra" onerror="this.style.display='none'">
+                    <span>ELECTRA</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/tadiran-international.com" alt="Tadiran" onerror="this.style.display='none'">
+                    <span>TADIRAN</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/tornado-top.co.il" alt="Tornado" onerror="this.style.display='none'">
+                    <span>TORNADO</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" onerror="this.style.display='none'">
+                    <span>SAMSUNG</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/lg.com" alt="LG" onerror="this.style.display='none'">
+                    <span>LG</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/bosch.com" alt="Bosch" onerror="this.style.display='none'">
+                    <span>BOSCH</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/beko.com" alt="Beko" onerror="this.style.display='none'">
+                    <span>BEKO</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/aeg.com" alt="AEG" onerror="this.style.display='none'">
+                    <span>AEG</span>
+                </div>
+                <div class="brand-item">
+                    <img src="https://logo.clearbit.com/amcor.com" alt="Amcor" onerror="this.style.display='none'">
+                    <span>AMCOR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <i class="fa-solid fa-screwdriver-wrench bg-icon"></i>
+        <div class="container">
+            <div class="section-title" style="color:white; border-color:white;">דברו איתי</div>
+            <p>תקלה דחופה? המזגן לא מקרר? אל תהססו להתקשר לייעוץ.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <h3>חייגו עכשיו</h3>
+                    <p>050-000-0000</p>
+                    <a href="tel:0500000000" class="btn" style="width:auto; font-size:0.9rem;">התקשר</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>וואטסאפ</h3>
+                    <p>שלחו תמונה של התקלה</p>
+                    <a href="https://wa.me/972500000000" class="btn" style="background:#25d366; width:auto; font-size:0.9rem;">שלח הודעה</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>אזורי שירות</h3>
+                    <p>גוש דן, השרון והשפלה</p>
+                    <span style="font-size:0.8rem; opacity:0.7;">א'-ה': 08:00 - 20:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 דניאל שירותי חשמל ומיזוג. כל הזכויות שמורות.</p>
+            <div style="margin-top: 15px; font-size: 1.2rem;">
+                <a href="#" style="color:#fff; margin:0 10px;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color:#fff; margin:0 10px;"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/972500000000" class="whatsapp-float" target="_blank">
+        <div class="whatsapp-pulse"></div>
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // וידאו: הבטחת ניגון בדפדפנים שונים
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('heroVideo');
+            if(video) {
+                video.play().catch(error => {
+                    console.log("Video autoplay was blocked by browser policy or failed to load");
+                });
+            }
+        });
+
+        // Marquee Center Highlight Logic
+        function updateMarqueeHighlight() {
+            const items = document.querySelectorAll('.brand-item');
+            const centerScreen = window.innerWidth / 2;
+            const threshold = 100; // מרחק מהמרכז שנחשב "פעיל"
+
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const itemCenter = rect.left + rect.width / 2;
+                const distance = Math.abs(centerScreen - itemCenter);
+
+                if (distance < threshold) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            requestAnimationFrame(updateMarqueeHighlight);
+        }
+        
+        // Start the loop
+        updateMarqueeHighlight();
+
+        // תפריט מובייל
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            
+            navLinks.classList.toggle('active');
+            
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // סגירת תפריט בלחיצה בחוץ
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // אם התפריט פתוח והלחיצה היא לא על התפריט או על ההמבורגר
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(event.target) && 
+                !hamburger.contains(event.target)) {
+                toggleMenu();
+            }
+        });
+
+        // אנימציית סקילס
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progress = entry.target.querySelector('.progress');
+                    const width = progress.getAttribute('data-width');
+                    progress.style.width = width;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.skill-item').forEach(item => {
+            observer.observe(item);
+        });
+        
+        // אפקט סטיקי
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+                header.style.padding = "5px 0";
+            } else {
+                header.style.boxShadow = "0 2px 20px rgba(0,0,0,0.05)";
+                header.style.padding = "10px 0";
+            }
+        });
+    </script>
+</body>
+</html>
