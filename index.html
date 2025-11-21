@@ -3,7 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>דניאל - מומחה למיזוג אוויר ומוצרי חשמל לבנים</title>
+
+    <!-- SEO בסיסי -->
+    <title>סולטן חשמל ומיזוג – טכנאי חשמל ומיזוג אוויר בירושלים והמרכז</title>
+    <meta name="description" content="סולטן חשמל ומיזוג – טכנאי חשמל ומיזוג אוויר המעניק שירות תיקון והתקנת מזגנים ומוצרי חשמל בירושלים, גוש דן והמרכז. שירות אמין, מקצועי ומהיר בבית הלקוח.">
+    <meta name="keywords" content="סולטן חשמל ומיזוג, חשמלאי בירושלים, טכנאי מזגנים בירושלים, טכנאי חשמל במרכז, תיקון מזגנים, תיקון מוצרי חשמל לבנים, טכנאי מקררים, טכנאי מכונות כביסה">
+    <meta name="robots" content="index,follow">
+    <meta name="language" content="he">
+    <meta name="geo.region" content="IL-JM">
+    <meta name="geo.placename" content="Jerusalem">
+    <meta name="geo.position" content="31.778;35.235">
+    <meta name="ICBM" content="31.778, 35.235">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="סולטן חשמל ומיזוג – טכנאי חשמל ומיזוג אוויר בירושלים והמרכז">
+    <meta property="og:description" content="תיקון והתקנת מזגנים ומוצרי חשמל לבנים בירושלים, גוש דן והמרכז. שירות מהיר, אמין ומקצועי.">
+    <meta property="og:locale" content="he_IL">
+
+    <!-- LocalBusiness Schema.org (SEO מקומי) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "סולטן חשמל ומיזוג",
+      "telephone": "+972-50-000-0000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "ירושלים",
+        "addressCountry": "IL"
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "ירושלים" },
+        { "@type": "Place", "name": "גוש דן" },
+        { "@type": "Place", "name": "השרון" },
+        { "@type": "Place", "name": "השפלה" }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
     
     <!-- גופנים: Rubik לעברית מודרנית -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,7 +175,7 @@
             align-items: center;
         }
 
-        /* לוגו (עכשיו תמונה) */
+        /* לוגו (עכשיו תמונה + טקסט סולטן חשמל ומיזוג) */
         .logo-styled {
             display: flex;
             align-items: center;
@@ -170,19 +208,20 @@
             display: flex;
             flex-direction: column;
             line-height: 1.1;
+            margin-right: 10px;
         }
 
         .logo-main {
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: 900;
-            color: var(--primary-color);
+            color: #c99830; /* סולטן */
             letter-spacing: -0.5px;
         }
 
         .logo-sub {
-            font-size: 0.85rem;
+            font-size: 1.2rem;
             font-weight: 500;
-            color: var(--secondary-color);
+            color: #414143; /* חשמל ומיזוג */
         }
         */
 
@@ -809,7 +848,11 @@
         <div class="container nav-container">
             <!-- לוגו (מימין) -->
             <a href="#" class="logo-styled">
-                <img src="assets/images/logo-full.png" alt="דניאל - חשמל ומיזוג" class="logo-image">
+                <img src="assets/images/logo-full.png" alt="סולטן חשמל ומיזוג – טכנאי חשמל ומיזוג אוויר" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-main">סולטן</span>
+                    <span class="logo-sub">חשמל ומיזוג</span>
+                </div>
             </a>
 
             <!-- המבורגר (משמאל בגלל margin-right: auto ב-CSS) -->
@@ -931,7 +974,7 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <!-- תמונה: תיקון מדחס -->
-                    <img src="assets/images/air_condition_fixing.png" alt="תיקון מדחס מזגן">
+                    <img src="assets/images/air_condition_fixing.png" alt="סולטן חשמל ומיזוג – תיקון מדחס מזגן בירושלים והמרכז">
                     <div class="gallery-overlay">
                         <h3>החלפת מדחס</h3>
                         <p>תיקון יחידה חיצונית והחלפת קבל</p>
@@ -939,7 +982,7 @@
                 </div>
                 <div class="gallery-item">
                     <!-- תמונה: תיקון מכונת כביסה -->
-                    <img src="assets/images/washing_machine_fixing.png" alt="שיפוץ מכונת כביסה">
+                    <img src="assets/images/washing_machine_fixing.png" alt="סולטן חשמל ומיזוג – שיפוץ מכונת כביסה ללקוחות מאזור ירושלים והמרכז">
                     <div class="gallery-overlay">
                         <h3>שיפוץ מכונת כביסה</h3>
                         <p>החלפת משאבת מים וניקוי פילטר</p>
@@ -947,7 +990,7 @@
                 </div>
                 <div class="gallery-item">
                     <!-- תמונה: תיקון מקרר -->
-                    <img src="assets/images/fridge_fixing.png" alt="תיקון מקרר">
+                    <img src="assets/images/fridge_fixing.png" alt="סולטן חשמל ומיזוג – תיקון מקרר ביתי באזור גוש דן והשרון">
                     <div class="gallery-overlay">
                         <h3>תיקון מקרר</h3>
                         <p>טיפול בבריחת גז והחלפת טיימר</p>
@@ -1084,7 +1127,7 @@
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <h3>אזורי שירות</h3>
-                    <p>גוש דן, השרון והשפלה</p>
+                    <p>ירושלים, גוש דן, השרון והשפלה</p>
                     <span style="font-size:0.8rem; opacity:0.7;">א'-ה': 08:00 - 20:00</span>
                 </div>
             </div>
