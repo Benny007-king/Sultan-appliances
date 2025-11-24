@@ -1,166 +1,47 @@
-# Sultan Appliances
+# סולטן חשמל ומיזוג (Sultan Appliances) 🛠️❄️
 
-Sultan Appliances is an online storefront for home appliances — a responsive web application that lets customers browse products, add items to a shopping cart, and complete purchases. This README provides an overview of the project, how to run it locally, common workflows, and guidance for maintaining and deploying the site.
+ברוכים הבאים למאגר הקוד של **סולטן חשמל ומיזוג** – אתר תדמית מקצועי ורספונסיבי לטכנאי מוצרי חשמל ומיזוג אוויר.
+האתר נועד לספק מידע על השירותים, להציג המלצות ועבודות, ולאפשר ללקוחות ליצור קשר מהיר דרך הטלפון או הוואטסאפ.
 
-> NOTE: This README is a general, ready-to-edit template. Please replace placeholders (like commands, environment variables, or service names) with the actual values used in this repository.
+## 📌 אודות הפרויקט
 
-## Table of contents
-- Project overview
-- Features
-- Demo / Screenshots
-- Tech stack
-- Getting started (local development)
-- Environment variables
-- Running tests
-- Building and deployment
-- Project structure
-- Contributing
-- License
-- Contact
+האתר נבנה כעמוד נחיתה (One-Pager) מודרני, עם דגש על חווית משתמש (UX), נגישות ועיצוב נקי. הוא מותאם לכל המכשירים (מובייל, טאבלט ודסקטופ) וכולל אינטגרציות ליצירת קשר מיידי.
 
-## Project overview
-Sultan Appliances is built to showcase and sell household appliances (fridges, ovens, washers, air conditioners, etc.). It aims to provide a clean product catalogue, simple checkout experience, and admin tools to manage inventory and orders.
+### פיצ'רים מרכזיים:
+* **עיצוב רספונסיבי מלא:** התאמה מושלמת לכל גודל מסך.
+* **תפריט נגישות:** כלי נגישות מובנים (הגדלת טקסט, ניגודיות, הקראת טקסט ועוד) לעמידה בתקנים.
+* **גלריית עבודות:** הצגת תמונות לפני/אחרי של תיקונים.
+* **יצירת קשר מהירה:** כפתורים צפים לחיוג ולשליחת הודעה בוואטסאפ.
+* **אנימציות:** שימוש ב-CSS ו-JS לאנימציות גלילה הדרגתיות.
+* **מדיניות פרטיות וקוקיז:** פופאפ הסכמה לשימוש בעוגיות ומודל מדיניות פרטיות.
 
-Use this README to document the specific architecture (monorepo, frontend only, backend API, database) and update commands and config examples.
+## 🛠️ טכנולוגיות
 
-## Features
-- Product catalogue with categories and filters
-- Product detail pages with images, descriptions and specs
-- Add to cart and persistent cart (guest + authenticated users)
-- Checkout flow (shipping + payment) — integrations are placeholders and should be configured with your payment provider
-- User authentication (sign up, sign in, profile)
-- Admin dashboard to add/edit products, manage orders and inventory
-- Responsive and accessible UI
-- Search and sorting
-- Basic analytics and order export (optional)
+הפרויקט בנוי על טהרת ה-Web הסטנדרטי ללא תלות בספריות כבדות:
+* **HTML5** - מבנה סמנטי.
+* **CSS3** - עיצוב מתקדם, Flexbox, Grid, ומשתני CSS (Variables).
+* **JavaScript (Vanilla)** - לוגיקה לתפריטים, נגישות ואינטראקציות.
+* **FontAwesome** - לאייקונים וגרפיקה וקטורית.
 
-## Demo / Screenshots
-If you have a live site, add the URL and screenshots here:
+## 🚀 התקנה והרצה מקומית
 
-Live demo: https://example.com (replace with the real URL)
+מכיוון שמדובר באתר סטטי, אין צורך בהתקנות מורכבות של שרתים.
 
-Screenshots:
-- /docs/screenshots/home.png
-- /docs/screenshots/product-page.png
-- /docs/screenshots/checkout.png
+1.  **הורדת הפרויקט:**
+    ```bash
+    git clone [https://github.com/Benny007-king/Sultan-appliances.git](https://github.com/Benny007-king/Sultan-appliances.git)
+    ```
+2.  **הרצה:**
+    פשוט פתחו את הקובץ `index.html` בדפדפן שלכם (Chrome, Firefox, Edge וכו').
 
-## Tech stack
-Replace these with the actual tech used in this repo:
-- Frontend: React / Next.js / Vue / plain HTML + CSS + JavaScript
-- UI: Tailwind CSS / Bootstrap / custom CSS
-- Backend: Node.js + Express / Django / Rails / Firebase / serverless functions
-- Database: PostgreSQL / MySQL / MongoDB / Firebase
-- Payments: Stripe / PayPal (configure in production)
-- Authentication: JWT / OAuth / Firebase Auth
+## 📂 מבנה התיקיות
 
-## Getting started (local development)
-
-1. Clone the repo
-   ```bash
-   git clone https://github.com/Benny007-king/Sultan-appliances.git
-   cd Sultan-appliances
-   ```
-
-2. Install dependencies (example; replace with the command used by your project)
-   ```bash
-   # frontend
-   npm install
-
-   # or if using yarn
-   yarn
-   ```
-
-3. Setup environment variables
-   - Copy the .env.example to .env and fill in the values (see "Environment variables" below).
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Run the application (example commands)
-   ```bash
-   # start development server
-   npm run dev
-
-   # build for production
-   npm run build
-   npm run start
-   ```
-
-Adjust these commands to match the actual scripts in package.json or the project's build system.
-
-## Environment variables
-Create a `.env` file and add required secrets and config. Common values:
-- NODE_ENV=development
-- PORT=3000
-- DATABASE_URL=postgres://user:pass@localhost:5432/dbname
-- JWT_SECRET=your_jwt_secret
-- STRIPE_SECRET_KEY=sk_test_xxx
-- NEXT_PUBLIC_API_URL=http://localhost:3000/api
-
-Only keep real secrets in secure place (secrets manager, CI protected variables). Do not commit `.env` to the repository.
-
-## Running tests
-If the project includes tests, run them with:
-```bash
-npm test
-# or
-yarn test
-```
-Add instructions for unit, integration, and end-to-end tests and how to run them in CI.
-
-## Building and deployment
-Typical deployment steps:
-- Build production assets (e.g., `npm run build`)
-- Deploy backend and frontend to your host (Vercel, Netlify, AWS, DigitalOcean, Heroku, etc.)
-- Configure environment variables in the hosting provider
-- Configure domain and SSL
-
-Example: Deploying a Node/Express + React app to Heroku:
-```bash
-heroku create sultan-appliances
-git push heroku main
-heroku config:set NODE_ENV=production
-heroku config:set DATABASE_URL=postgres://...
-```
-
-## Project structure
-Adjust to match the repository layout:
-```
+```text
 /
-├─ /client           # frontend application
-├─ /server           # backend API
-├─ /docs             # documentation and screenshots
-├─ /scripts          # helper scripts
-├─ .env.example
-├─ package.json
-└─ README.md
-```
-
-## Contributing
-Thank you for contributing! Please:
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m "Add my feature"`
-4. Push to your branch: `git push origin feature/my-feature`
-5. Open a pull request describing your changes
-
-Include a code of conduct and CONTRIBUTING.md if you want formal guidelines.
-
-## License
-Specify a license (e.g., MIT). If you don't have one yet, add one to the repository.
-
-Example:
-```
-MIT License
-Copyright (c) 2025 Benny007-king
-```
-
-## Contact
-Maintainer: Benny007-king  
-Repository: https://github.com/Benny007-king/Sultan-appliances
-
-If you'd like, I can:
-- Replace placeholders with the exact commands and environment variables used by your project,
-- Add screenshots and a live demo link,
-- Create a CONTRIBUTING.md or LICENSE file,
-- Or prepare a commit/PR updating README in the repo.
+├── assets/
+│   ├── images/       # תמונות האתר (לוגו, טכנאי, עבודות)
+│   └── videos/       # סרטוני רקע (אם ישנם)
+├── index.html        # עמוד הבית הראשי
+├── robots.txt        # הגדרות למנועי חיפוש
+├── LICENSE           # רישיון השימוש
+└── README.md         # קובץ זה
