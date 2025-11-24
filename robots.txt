@@ -6,4 +6,4 @@ Disallow: /private/
 Disallow: /tmp/
 
 # הפניה למפת האתר (מומלץ ליצור קובץ sitemap.xml ולהחליף את הכתובת כאן)
-Sitemap: https://www.your-domain.com/sitemap.xml
+Sitemap: https://sultan-appliances.co.il/sitemap.xml
