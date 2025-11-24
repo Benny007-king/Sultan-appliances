@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# מנע סריקה של תיקיות מערכת או קבצים פרטיים אם יהיו בעתיד
+Disallow: /private/
+Disallow: /tmp/
+
+# הפניה למפת האתר (מומלץ ליצור קובץ sitemap.xml ולהחליף את הכתובת כאן)
+Sitemap: https://www.your-domain.com/sitemap.xml
