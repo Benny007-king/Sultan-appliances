@@ -1,9 +1,17 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
 Allow: /
 
-# מנע סריקה של תיקיות מערכת או קבצים פרטיים אם יהיו בעתיד
-Disallow: /private/
-Disallow: /tmp/
-
-# הפניה למפת האתר (מומלץ ליצור קובץ sitemap.xml ולהחליף את הכתובת כאן)
+# הפניה למפת האתר 
 Sitemap: https://sultan-appliances.co.il/sitemap.xml
